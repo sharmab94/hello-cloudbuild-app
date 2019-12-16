@@ -40,6 +40,3 @@ steps:
   - 'push'
   - 'us.gcr.io/business-services-platform-dev/hello-cloudbuild:$SHORT_SHA'
 # [END cloudbuild]
-
-options:
-  workerPool: 'odsp-management/cloud-build-workers'
