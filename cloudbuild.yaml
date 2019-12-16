@@ -28,7 +28,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'us.gcr.io/odsp-management/hello-cloudbuild:$SHORT_SHA'
+  - 'us.gcr.io/business-services-platform-dev/hello-cloudbuild:$SHORT_SHA'
   - '.'
 
 # This step pushes the image to Container Registry
@@ -38,7 +38,7 @@ steps:
   id: Push
   args:
   - 'push'
-  - 'us.gcr.io/odsp-management/hello-cloudbuild:$SHORT_SHA'
+  - 'us.gcr.io/business-services-platform-dev/hello-cloudbuild:$SHORT_SHA'
 # [END cloudbuild]
 
 options:
