@@ -63,7 +63,7 @@ steps:
   - '-c'
   - |
      sed "s/GOOGLE_CLOUD_PROJECT/business-services-platform-dev/g" kubernetes.yaml.tpl | \
-     sed "s/COMMIT_SHA/${SHORT_SHA}/g" > hello-cloudbuild-env/kubernetes.yaml
+     sed "s/COMMIT_SHA/${SHORT_SHA}/g" > hello-cloudbuild-env/cloudbuild.yaml
 
 
 # # This step pushes the manifest back to hello-cloudbuild-env
@@ -75,7 +75,7 @@ steps:
   - |
     set -x && \
     cd hello-cloudbuild-env && \
-    git add kubernetes.yaml && \
+    git add cloudbuild.yaml && \
     git commit -m "Deploying image us.gcr.io/business-services-platform-dev/hello-cloudbuild:${SHORT_SHA}
     Built from commit ${COMMIT_SHA} of repository hello-cloudbuild-app
     Author: $(git log --format='%an <%ae>' -n 1 HEAD)" && \
