@@ -63,7 +63,7 @@ steps:
   - '-c'
   - |
      sed "s/GOOGLE_CLOUD_PROJECT/business-services-platform-dev/g" kubernetes.yaml.tpl | \
-     sed "s/COMMIT_SHA/${SHORT_SHA}/g" > hello-cloudbuild-env/cloudbuild.yaml
+     sed "s/COMMIT_SHA/${SHORT_SHA}/g" > hello-cloudbuild-env/kubernetes.yaml
 
 
 # # This step pushes the manifest back to hello-cloudbuild-env
