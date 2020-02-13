@@ -75,6 +75,7 @@ steps:
   - |
     set -x && \
     cd hello-cloudbuild-env && \
+    git pull origin develop && \
     git add kubernetes.yaml && \
     git commit -m "Deploying image us.gcr.io/business-services-platform-dev/hello-cloudbuild:${SHORT_SHA}
     Built from commit ${COMMIT_SHA} of repository hello-cloudbuild-app
